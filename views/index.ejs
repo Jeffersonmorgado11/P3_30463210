@@ -1,0 +1,77 @@
+<!doctype html>
+<!--[if lte IE 9]>
+<html lang="en" class="oldie">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Background Effect</title>
+  <link rel="stylesheet" media="all" href="/css/style.css"/>
+  <style type="text/css">
+    @font-face{
+          font-family:'fuente';
+          src:url('/fuentes/BatGhostDEMO.ttf');
+        }
+        @font-face{
+          font-family: 'fuente2';
+          src:url('/fuentes/The Bloody Butcher.ttf');
+        }
+    h1{
+      color:white;
+      text-align: center;
+      margin-top: 50px;
+      font:80px 'fuente2';
+    }
+    #boton{
+      display:flex;
+      justify-content:flex-end;
+      align-items: center;
+      border:1px solid white;
+      height:15vh;
+      background: transparent;
+      backdrop-filter: blur(6px);
+      border-radius:0 0 15px 15px;
+    }
+    a{
+      margin-right: 25px;
+      text-decoration: none;
+      color:white;
+      font: 40px 'fuente2';
+    }
+    #boton a{
+      transition: all 1s;
+     
+    }
+    #boton a:hover{
+      text-shadow:9px 7px 3px white;
+      transform:translateY(-10px);
+    }
+    #nombre{
+      color:white;
+        font:50px 'fuente2';
+        margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+<div class="lines">
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+
+  <div id='boton'>
+    <a href='/login'>Admin</a>
+  </div>
+
+  <h1>Bienvenido</h1>
+  <div id='nombre'>
+    <h2>Jefferson Morgado</h2>
+    <p>Cedula : 30.463.210</p>
+    <p>Sección : 2</p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+ @font-face{
+          font-family: 'fuente2';
+          src:url('/fuentes/The Bloody Butcher.ttf');
+        }
+
+body{
+	background-image:url('https://images.pexels.com/photos/159397/solar-panel-array-power-sun-electricity-159397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+	background-size: cover;
+	background-attachment: fixed;
+
+}
+
+.login{
+	text-shadow: 2px 4px 1px white;
+	color:black;
+	font-size: 5rem;
+	text-transform: uppercase;
+	font-weight: bolder;
+	font-family: fuente2;
+	letter-spacing: 2px;
+}
+
+#login{
+	display:flex;
+	flex-direction:column;
+	justify-content: center;
+	align-items:center;
+	width: 30%;
+	background: rgba(0, 0, 0, .4);
+	backdrop-filter: blur(6px);
+	margin:50px auto;
+	border-radius:10px 10px 10px 10px;
+	text-transform: uppercase;
+	padding: 40px;
+	border: 2px solid white;
+	box-shadow: 0 0 30px rgb(0,0,0,.8) inset;
+
+}
+
+label{
+	margin-top: 2rem;
+	align-self: flex-start;
+	font-weight: bolder;
+	font-size: 1rem;
+	color: white;
+	font-family: 'arial';
+}
+
+h1{
+	text-align:center;
+	font-weight: unset;
+	font: 40px 'fuente2';
+
+}
+
+form{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+
+input{
+	color: #fff;
+	text-align: center;
+	margin-top: 10px;
+	border-radius:10px;
+	width: 150%;
+	border: none;
+	outline: none;
+	font-size: 1em;
+	background: transparent;	
+	border-right: 1px solid grey;
+	border-bottom: 1px solid grey;
+}
+
+input::placeholder{
+	color: white;
+}
+
+#iniciar{
+	margin-top: 35px;
+	font-weight: bolder;
+	position: relative;
+	display: inline-block;
+	font-size: 2rem;
+	letter-spacing: 4px;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	background-color: rgb(60, 60, 60);
+	transform: skewX(-10deg);
+	padding: 5px;
+	cursor: pointer;
+	transition: .5s all ease;
+}
+#iniciar:hover{
+	color:black;
+}
+

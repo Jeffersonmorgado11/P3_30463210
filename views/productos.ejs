@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <meta charset="UTF-8">
+  <title>Sistema</title>
+  <link rel="stylesheet" type="text/css" href="/css/producto.css">
+  
+</head>
+<body>
+  
+  <div id='botones'>
+    <a id='botonProductos' href="/">Regresar</a>
+    <a href='/categorias' id='botonProductos'>Categorias</a> 
+    <a href="/add"><img src="/icon/add.png" id='add'></a>
+  </div>
+
+  <h1>Sistema Administrativo</h1>
+  <div class="table">
+    <table>
+          <tr>
+            <th>id</th>
+            <th>Nombre</th>
+            <th>Codigo</th>
+            <th>Precio</th>
+            <th>Descripcion</th>
+            <th>Origen</th>
+            <th>Capacidad</th>
+            <th>Categoria</th>
+            <th>Opciones</th>
+          </tr>
+          <%for(const producto of modelo){%>
+            <tr>
+              <td><%=producto.producto_id%></td>
+              <td><%=producto.nombre%></td>
+              <td><%=producto.codigo%></td>
+              <td><%=producto.precio%></td>
+              <td><%=producto.descripcion%></td>
+              <td><%=producto.origen%></td>
+              <td><%=producto.capacidad%></td>
+              <td><%=producto.categoria_id%></td>
+              <td class="icon">
+              <a href="/update/<%= producto.producto_id%>"><img src="/icon/update.png" width="30"></a>
+              <a href="/delete/<%= producto.producto_id%>"><img src="/icon/delete.png" width="30" id="delete"></a>
+              <a href="/addImagen"><img src="/icon/imagen.png" width="30"></a>
+             </td>
+            </tr>
+           <%}%>
+        </table>
+       
+  </div>
+
+</body>
+</html>

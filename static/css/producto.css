@@ -1,0 +1,79 @@
+ @font-face{
+          font-family: 'fuente2';
+          src:url('/fuentes/The Bloody Butcher.ttf');
+        }
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+
+body{
+background-image:url('https://images.pexels.com/photos/8853502/pexels-photo-8853502.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+background-size:cover;
+background-attachment:fixed;
+}
+.table{
+margin:50px auto;
+width:98%;
+background-image:url('https://images.pexels.com/photos/9800003/pexels-photo-9800003.jpeg?auto=compress&cs=tinysrgb&w=400');
+background-size: cover;
+background-attachment: fixed;
+background-position:center;
+}
+table{
+ color:white;
+ width:100%;
+ font-size:20px;
+}
+h1{
+	color:rgb(67, 250, 248);
+	text-align:center;
+	margin-top:50px;
+	font:60px 'fuente2';
+}
+span{
+	font:50px 'dar';
+
+}
+td{
+	text-align:center;
+}
+
+#add{
+ height:5vh;
+}
+th{
+	padding:20px;
+}
+#botones{
+	margin-top: 50px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	 border-top:none;
+	 border-left:none;
+	 border-right:none;
+
+}
+#botones a{
+	border-radius:15px 10px 20px 10px;
+	font:30px 'dar';
+	padding:20px;
+	text-decoration: none;
+	transition: all 1s;
+	color:rgb(67, 250, 248);
+	font-weight: bolder;
+	font:40px 'fuente2';
+}
+#botones a:hover{
+transform:scale(1.3);
+text-decoration:line-through;
+color:rgb(208, 232, 250);
+}
+table tr{
+	transition: all 1.4s;
+}
+table tr:hover{
+	background:rgba(222, 231, 229,.8);
+}
