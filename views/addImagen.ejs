@@ -84,16 +84,19 @@ color:white;
 
 <div id='divDestacado'>
 	
-<form action="/addImagen" method="post" enctype="multipart/form-data">
+<form action="/addImagen/<%=modelo.producto_id%>" method="post" enctype="multipart/form-data">
 	<label for='imagen'>Imagen</label>
 	
 	<input type="file" name="img" id="img" placeholder="Imagen">
   
 	<label for="destacado">Destacado</label>
-	
-	<input type="text" name="destacado" placeholder="Destacado" id='destacado'>
 
-	<input type="submit" value="add" id="destacado">
+  <select id='destacado' name='destacado'>
+  	<option value='1'>principal</option>
+  	<option value='0'>No principal</option>
+  </select>
+
+	<input type="submit" value="add" id="destacadoo">
 </form>
 </div>
 

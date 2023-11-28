@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Detalles</title>
+	<style type="text/css">
+	 @font-face{
+            font-family:'fuenteC';
+            src:url(/fuentes/HyperSuperFast.ttf);
+           }
+           body{
+           	background:rgba(82, 175, 162,.6);
+           }
+		img{
+			width:25%;
+			height: auto;
+			margin:20px;
+		}
+		#contenedor{
+			display:flex;
+			justify-content: center;
+		 width: 80%;
+		 margin:70px auto;
+		}
+		h1{
+			text-align: center;
+			line-height:100px;
+			font:50px 'fuenteC';
+		}
+		a{
+			text-decoration:none;
+			color:black;
+			font:30px 'fuenteC';
+			margin-left:20px;
+		}
+		 @media screen and (max-width: 720px){
+		 	img{
+			width:70%;
+			height: auto;
+			margin:20px;
+		}
+		 }
+	</style>
+</head>
+<body>
+  <h1>Imagenes del Producto</h1>
+
+   <div id='contenedor'>
+  <% for(let m = 0;m < imagenes.length;m++){ %>
+   <img src="<%= imagenes[m].url%>">
+  <% } %>
+
+   </div>
+   <a href="/clientes">Volver</a>
+
+</body>
+</html>

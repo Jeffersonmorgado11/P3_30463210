@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>Sistema</title>
   <link rel="stylesheet" type="text/css" href="/css/producto.css">
-  
+  <link rel="icon" type="image/x-icon" href="icon/solar.png" />
 </head>
 <body>
   
@@ -42,7 +42,7 @@
               <td class="icon">
               <a href="/update/<%= producto.producto_id%>"><img src="/icon/update.png" width="30"></a>
               <a href="/delete/<%= producto.producto_id%>"><img src="/icon/delete.png" width="30" id="delete"></a>
-              <a href="/addImagen"><img src="/icon/imagen.png" width="30"></a>
+              <a href="/addImagen/<%= producto.producto_id%>"><img src="/icon/imagen.png" width="30"></a>
              </td>
             </tr>
            <%}%>
