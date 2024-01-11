@@ -9,6 +9,7 @@
   <!-- Favicon-->
   <link rel="icon" type="image/x-icon" href="icon/solar.png" />
   <link rel="stylesheet" type="text/css" href="/css/clientes.css">
+  <script type="text/javascript" src="/js/alert.js"></script>
 </head>
 <body>
   <div class='clasePadre'>
@@ -17,7 +18,7 @@
     <!-- Navigation-->
     <nav class="navv">
 
-      <a href="/" id='volver'>Volver</a>
+      <a href="/logout" id='volver'>Volver</a>
       <div class="nocontainer">
         <div class="row-----">
           <input class="form-control" id="buscarPrincipal" type="search" placeholder="Buscar Producto..." aria-label="Buscar Producto..."/>
@@ -65,11 +66,12 @@
                 <p><strong style='margin-right:10px;font-size:20px;'>Nombre:</strong><%= producto[x].nombre %></p>
                 <p><strong style='margin-right:10px;font-size:20px;'>Precio:</strong><span style='color:green'><%= producto[x].precio %> $</span></p>
 
-              </div>
+              </div>    
 
               <div id='comprarDetalles'>
 
-               <img src="/icon/carrito.png" class='imgCarrito'>
+              <a href="/comprar/<%=producto[x].producto_id%>"><img src="/icon/carrito.png" class='imgCarrito' width="30"></a>
+
                <a href="/detalles/<%=producto[x].producto_id%>" style='margin-top:7px;margin-left:8px;'><img src="/icon/detalle.png" width="30"></a> 
 
              </div>
@@ -116,7 +118,10 @@
             <td class='column'><%= producto[u].capacidad %></td>
             <td class='column'><%= producto[u].categoria_id %></td>
             <td>
-              <img src="/icon/carrito.png" style='width:80%;'>
+              
+             
+              <a href="/comprar/<%=producto[u].producto_id%>"><img src="/icon/carrito.png" width="30"></a>
+
               <a href="/detalles/<%=producto[u].producto_id%>" style='margin-top:7px;margin-left:8px;'><img src="/icon/detalle.png" width="30"></a>
             </td>
           </tr> 
@@ -135,7 +140,10 @@
         <li class='LItabla3'><span>Categoria: </span><span><%= producto[l]. categoria_id %></span></li>
         <li class='LItabla3'>
           <div style='display:flex;justify-content:center;align-items:center;width:20%;'>
-            <img src="/icon/carrito.png" style='width:100%;'>
+           
+          <a href="/comprar/<%=producto[l].producto_id%>"><img src="/icon/carrito.png" class="responsive" width="30"></a>
+
+
           </div>
           <div style='display:flex;justify-content:center;align-items:center;width:20%;'>
            <a href="/detalles/<%=producto[l].producto_id%>" style='margin-top:7px;margin-left:8px;'><img src="/icon/detalle.png" style='width:100%;'></a>
@@ -168,7 +176,34 @@
   <p style='font-size:30px;margin:20px;'>Al invertir en paneles solares, los propietarios de viviendas y las empresas pueden aprovechar la energía del sol para alimentar sus hogares y negocios de manera más limpia y económica. Los paneles solares convierten la luz solar en electricidad utilizando células fotovoltaicas que generan corriente continua. Esta electricidad puede ser utilizada de inmediato o almacenada en baterías para su uso posterior.</p>
 </div>
 
+<script type="text/javascript">
+     fetch('/transaction')
+    .then(res=>res.json())
+    .then(respuesta=>{
+        if(respuesta.message !== false){
+         console.log(respuesta);
+           Swal.fire(respuesta.transaction.message)
 
+           .then(() =>{
+        // Aquí la alerta se ha cerrado
+            console.log("Alerta cerrada");
+            fetch('/eliminarTransaction')
+            .then(res=> res.json())
+            .then(respuesta2=>{
+            console.log(`Message : ${respuesta2.message}`);
+            })
+            .catch(error => {
+               console.error('*_*/-[Error]-/*_*:', error);
+             });
+        }); 
+
+           console.log(respuesta.transaction.message,'respuesta del server');  
+       }else{
+        console.log('No se recibio respuesta of the transaction'); 
+    }
+
+})
+</script>
 
 <script src="/js/script.js"></script>
 

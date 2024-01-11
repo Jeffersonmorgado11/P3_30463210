@@ -8,18 +8,15 @@
  box-sizing:border-box;
 }
 
-body{
-background-image:url('https://images.pexels.com/photos/8853502/pexels-photo-8853502.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-background-size:cover;
-background-attachment:fixed;
-}
+	body{
+	 background:-webkit-radial-gradient(center,circle,rgb(116, 188, 243),rgb(0,0,0,.9));
+		}
 .table{
+overflow:auto;
 margin:50px auto;
-width:98%;
-background-image:url('https://images.pexels.com/photos/9800003/pexels-photo-9800003.jpeg?auto=compress&cs=tinysrgb&w=400');
-background-size: cover;
-background-attachment: fixed;
-background-position:center;
+width:90%;
+height: auto;
+background:rgba(0,0,0,.6);
 }
 table{
  color:white;
@@ -41,10 +38,10 @@ td{
 }
 
 #add{
- height:5vh;
+ width:3.5vw;
 }
 th{
-	padding:20px;
+	padding:5px;
 }
 #botones{
 	margin-top: 50px;
@@ -58,18 +55,16 @@ th{
 }
 #botones a{
 	border-radius:15px 10px 20px 10px;
-	font:30px 'dar';
+	font:2.7rem 'fuente2';
 	padding:20px;
 	text-decoration: none;
 	transition: all 1s;
 	color:rgb(67, 250, 248);
 	font-weight: bolder;
-	font:40px 'fuente2';
 }
 #botones a:hover{
 transform:scale(1.3);
 text-decoration:line-through;
-color:rgb(208, 232, 250);
 }
 table tr{
 	transition: all 1.4s;

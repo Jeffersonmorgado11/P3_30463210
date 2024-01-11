@@ -1,0 +1,72 @@
+  @font-face{
+    font-family:'dali';
+    src:url('/fuentes/Zombie Predator TTF Personal.ttf');
+  }
+
+
+  .tablee {
+    overflow: auto;
+    background: rgba(0, 0, 0,.6);
+    width: 90%;
+    height: 60vh;
+    margin: 50px auto;
+    color:white;
+  }
+
+
+  body{
+   background:-webkit-radial-gradient(center,circle,rgb(116, 188, 243),rgb(0,0,0,.9));
+    }
+
+  .botonProductos {
+    color:white;
+    text-decoration: none;
+    padding: 8px;
+    margin: 10px;
+    transition: all 1s;
+  }
+  
+  
+  #botonera {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size:1.2rem;
+    font-weight: bold;
+    color: black;
+    background: rgba(180, 180, 180, .7);
+    border: 1px solid black;
+  }
+
+  table {
+    border: 1px solid black;
+    width: 100%;
+    color:white;
+    height: auto;
+    table-layout: auto;
+  }
+
+  table td {
+    text-align: center;
+  }
+
+  td, th {
+    width: auto;
+  }
+  h1 {
+    color:rgb(67, 250, 248);
+    width:100%;
+    text-align: center;
+    margin-top:1rem;
+    font: 3.5rem 'dali';
+    border-radius:15px;
+  }
+  .header{
+    background-color: rgb(28, 44, 73);
+    border-radius: 25px;
+    padding: 20px;
+    margin-top: 5px;
+  }
+  #add{
+    width:2.5rem;
+  }
