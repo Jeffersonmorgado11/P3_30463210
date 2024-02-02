@@ -11,15 +11,10 @@
    <title>Update</title>
 </head>
 
-<div id="botones">
-
-    <a href="/productos" id=''>Volver</a>
-
-</div>
-
  <h1 id="crear">Agregar Producto</h1>
 
 <form action="/addPost" method="post">
+
 <div class='flex-principal'>
 <!------------------------------------------->
 <div id="editorcentrall">
@@ -70,23 +65,37 @@
 
     
 <label for="categoria">Categoria</label>
+
 <select id='categoria' name='categoria'>
+    <option value='1'>Categoria 1</option>
     <option value='2'>Categoria 2</option>
     <option value='3'>Categoria 3</option>
     <option value='4'>Categoria 4</option>
     <option value='5'>Categoria 5</option>
-    <option value='6'>Categoria 6</option>
 </select>
 
 <!--------------------------------------------------->
 
 <!----------------------------------------------------->
- <input type="submit" value="Agregar" id='agg'>
+<div>
+
+<input type="submit" value="Agregar" class='agg'>
+<input type="button" value='cancelar' onclick='cancelar()' class='agg'>
+
+</div>
+ 
+
 </div>
 
 <!------------------------------------------->
 
 </div>
+<script type="text/javascript">
+    
+    function cancelar(){
+        window.location.href='/productos';
+    }
+</script>
 </form>
 </body>
 </html>

@@ -1,5 +1,3 @@
-//Randis Graterol
-
 function getContentType(extname) {
   switch (extname) {
     case '.html':

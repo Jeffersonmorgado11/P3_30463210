@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html>
-<body>
-<head>
-    <meta charset="utf-8">
+1<!DOCTYPE html>
+2<html>
+4<head>
+5   <meta charset="utf-8">
     <meta charset="iso-8559-1"/>
     <meta name= "description" content="pagina de enseñanza"/>
     <meta name="keywords" content="html5,javascript,diseño web"/>
@@ -10,16 +9,11 @@
     <link rel="stylesheet" type="text/css" href="/css/update.css">
    <title>Update</title>
 </head>
-
-<div id="botones">
-
-    <a href="/productos" id=''>Volver</a>
-
-</div>
-
+<body>
  <h1 id="crear">Actualizar Producto</h1>
 
 <form action="/update/<%=modelo.producto_id%>" method="post">
+
 <div class='flex-principal'>
 <!------------------------------------------->
 <div id="editorcentrall">
@@ -71,23 +65,31 @@
     
 <label for="categoria">Categoria</label>
 <select id='categoria' name='categoria'>
+    <option value='1'>Categoria 1</option>
     <option value='2'>Categoria 2</option>
     <option value='3'>Categoria 3</option>
     <option value='4'>Categoria 4</option>
     <option value='5'>Categoria 5</option>
-    <option value='6'>Categoria 6</option>
 </select>
-
 <!----------------------------------------------------->
 <!--------------------------------------------------->
-
 <!----------------------------------------------------->
- <input type="submit" value="Update" id='agg'>
+<div>
+     <input type="submit" value="Update" class='agg'>
+     <input type="button" value='cancelar' class='agg' onclick='cancelar()'>
+</div>
+
 </div>
 
 <!------------------------------------------->
 
 </div>
 </form>
+<script type="text/javascript">
+    
+    const cancelar= ()=>{
+        window.location.href='/productos';
+    }
+</script>
 </body>
 </html>

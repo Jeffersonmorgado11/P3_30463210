@@ -10,12 +10,10 @@
  @font-face{
           font-family: 'fuente2';
           src:url('/fuentes/The Bloody Butcher.ttf');
-        }
-		body{
-	background-image:url('https://images.pexels.com/photos/14384697/pexels-photo-14384697.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load');
-	background-size:cover;
-	background-attachment: fixed;
-    }
+  }
+	body{
+	 background:-webkit-radial-gradient(center,circle,rgb(116, 188, 243),rgb(0,0,0,.9));
+		}
     form{
     	display: flex;
     	flex-direction: column;
@@ -69,17 +67,22 @@
 transform: rotate(20deg);
 color:white;
 }
-
+.inputOption{
+	border-radius:10px;
+	height:5vh;
+	line-height:1px;
+	transition:all 1s;
+	background:rgb(67, 250, 248);
+	cursor:pointer;
+}
+.inputOption:hover{
+	transform:scale(1.1);
+}
 	</style>
 
 
 </head>
 <body>
-
-<div id='botones'>
-	<a href='/productos'>Volver</a>
-</div>
-
 <h1>Agregar Imagen</h1>
 
 <div id='divDestacado'>
@@ -96,9 +99,20 @@ color:white;
   	<option value='0'>No principal</option>
   </select>
 
-	<input type="submit" value="add" id="destacadoo">
+  <div style='margin-top:1rem;'>
+  	<input type="submit" value="Agregar" class='inputOption'>
+  	<input type="button" value="cancelar" onclick="cancelar()" class="inputOption">
+  </div>
+
+	
 </form>
 </div>
+<script type="text/javascript">
+	
+	const cancelar = ()=>{
+		window.location.href='/productos';
+	}
 
+</script>
 </body>
 </html>

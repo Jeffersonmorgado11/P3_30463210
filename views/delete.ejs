@@ -16,12 +16,17 @@
 
     <div id="cancelar">
 
-    <input type="submit" value="Eliminar Producto" id="eliminarRegistro">
-    <a href="/productos" id="botonProductos">Cancelar</a>
+    <input type="submit" value="Eliminar Producto" class="agg">
+    <input type="button" value="cancelar" onclick="cancelar()" class="agg">
 
    </div>
     
   </div>
+  <script type="text/javascript">
+    function cancelar(){
+      window.location.href='/productos';
+    }
+  </script>
 </form>
 </body>
 </html>
